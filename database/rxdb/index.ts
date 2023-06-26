@@ -22,8 +22,7 @@ export const initRxdb = async () => {
 export const getCollection = async (name: string) => {
   let collection = database?.[name];
   if (database && !collection) {
-    const schemaPath = `./schemas/${name}.js`;
-    let schema = await import(schemaPath);
+    let schema = await import(`./schemas/${name}.js`);
     const config: any = {};
     config[name] = { schema: schema.default };
     const collections = await database.addCollections(config);
