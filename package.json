@@ -14,5 +14,9 @@
     "@unocss/nuxt": "^0.53.3",
     "nuxt": "^3.6.0",
     "typescript": "latest"
+  },
+  "dependencies": {
+    "rxdb": "^14.14.1",
+    "rxjs": "^7.8.1"
   }
 }
